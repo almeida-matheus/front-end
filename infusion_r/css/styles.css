@@ -1,0 +1,181 @@
+/*NAVBAR*/
+body{
+    padding-top: 4rem;
+}
+.navbar{
+    padding: 0;
+    background-color: white;
+    box-shadow: 0 10px 12px rgba(0,0,0,.3)
+}
+/*logo*/
+.navbar-brand{
+    background-color: #63c6ae;
+    text-align: right;
+    min-width: 9rem; /*col-3, vai aumentando ate chega em 9rem*/
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;/*para o background verde colar na parte de baixo*/
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+/*links do menu a direita*/
+.nav-link{
+    display: block;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px dotted rgba(255,255,255,.2);
+    text-transform: uppercase;
+    font-size: .9rem;
+    transition: all .5s ease;
+    color: #586165;
+    font-weight: 600;
+}
+.nav-link:hover{
+    color: #63c6ae;
+}
+
+.navbar-nav{
+    background-color: #242a2c;
+    text-align: center;
+}
+/*alterar o menu/nav quando tiver no minimo lg, atinge oq for maior q isso*/
+@media screen and (min-width: 992px){
+    .navbar-nav{
+        background-color: transparent;
+        margin-left: 6rem;
+    }
+    .nav-link{
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-left: 0rem; /*opcional se quiser distanciar os links do menu*/
+    }
+}
+/*FINAL NAVBAR*/
+
+
+/*[CAROUSEL] apenas desktop*/
+.carousel-caption .h5{
+    background-color: #63c6ae;
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 600;
+    padding: 25px 20px;
+    margin-top: 240px;
+}
+.carousel-caption .carousel-text{
+    background-color: #242a2c;
+    margin: 5px 30px 35px;
+    color: white;
+    padding: 15px;
+    font-size: .9rem;
+}
+
+.carousel-caption .btn{
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 5px;
+    padding: 15px 25px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: rgba(0,0,0,.2);
+}
+/*botao de proximo e anterior do carousel*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+}
+/*FINAL [CAROUSEL] apenas desktop*/
+
+/*tirar borda padrao do bootstrap*/
+.card {
+    border: none;
+}
+/*colocar borda somente na esquerda do conteeudo*/
+.card-body{
+    border-left: 1px solid rgba(0,0,0,.15);
+}
+/*colocar borda em baixo de todos os cards*/
+.section-cards{
+    background-color: white;
+    border-bottom: 1px solid rgba(0,0,0,.15)
+}
+
+/*--textos 2 colunas, mobile 1 coluna*/
+.section-content{
+    background-color: #f8f9f9;
+}
+/*last articles css grid*/
+/*modificar o titulo*/
+.articles-container{
+    background-color: #63c6ae;
+    padding: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+.articles-container .h3{
+    margin-bottom: 0;
+}
+/*modificar fotos*/
+.articles-thumbs{
+    display: grid; /*pra poder distribuir e alinhar tudo la dentro*/
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /*no maximo 4 colunas*/
+    grid-auto-rows: auto; /*pra auto adaptar*/
+    grid-gap: 0; /*nenhum espaço entre uma celula e outra*/
+}
+/*para nao ter espaçamento entre as fotos*/
+.articles-thumbs img{
+    display: block;
+    width: 100%;
+}
+/*quando for maior q 991px*/
+@media screen and (min-width: 991px){
+    .articles-thumbs{
+        grid-template-columns: repeat(6, 1fr); /*sempre 6 colunas ocupando uma fração*/
+    }
+}
+
+/*carousel*/
+.section-notebooks{
+    background-color: #242a2c;
+    padding: 125px 0 100px;
+    width: 100%;
+}
+/*.carousel-item: cada uma das imagens*/
+.section-notebooks .carousel-item{
+    padding: 1rem;
+}
+/*para os botoes proximo e anterior nao se afastarem tanto da imagem*/
+@media screen and (min-width: 991px){
+    .section-notebooks .carousel-item{
+        padding: 5rem;
+    }
+}
+
+/*depoimento*/
+.section-quote{
+    background-color: #63c6ae;
+    padding: 50px 0;
+    border-bottom: 12px solid #48b9a1;
+    color: white;
+    text-align: center;
+}
+
+/*footer*/
+.footer{
+    background-color: #242a2c;
+    padding: 50px 0 50px;
+    color: #454e51;
+}
+
+.footer-links{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-links a{
+    color: inherit; /*herda coloraçao da classe pai*/
+    text-decoration: none;
+}

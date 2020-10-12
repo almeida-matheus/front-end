@@ -1,0 +1,574 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<!--codificação para reconhecer pontuações especiais-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Site</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+		integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<!--deixar centralizado os objetos-->
+		<div class="container">
+			<!--mb-0 = margem do h1 = 0-->
+			<a class="navbar-brand h1 mb-0" href="#">WEB Designer</a>
+			<button class="navbar-toggler" type="buttom" data-toggle="collapse" data-target="#navbarSite">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSite">
+				<!--alinhamento automatico, centralizar, coloca a ul a direita-->
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Sobre</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Serviços</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Depoimentos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contatos</a>
+					</li>
+				</ul>
+
+				<ul class="navbar-nav ml-auto">
+					<!--dropdown = opcao de abrir novos itens nele-->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Social</a>
+						<div class="dropdown-menu">
+							<a href="#" class="dropdown-item">Facebook</a>
+							<a href="#" class="dropdown-item">Twitter</a>
+							<a href="#" class="dropdown-item">Youtube</a>
+						</div>
+					</li>
+				</ul>
+
+				<form class="form-inline">
+					<!--ml-4 = margin left 4px, mr-2 margin right 2px-->
+					<input class="form-control ml-4 mr-2" type="search" name="" placeholder="Buscar...">
+					<button class="btn btn-default" type="submit">Ok</button>
+				</form>
+
+			</div>
+		</div>
+	</nav>
+
+	<div id="carouselSite" class="carousel slide" data-ride="carousel">
+		<!--indicador lista q fica em baixo da foto, li = numero de fotos-->
+		<ol class="carousel-indicators">
+			<li class="active" data-target="#carouselSite" data-slide-to="0"></li>
+			<li data-target="#carouselSite" data-slide-to="1"></li>
+			<li data-target="#carouselSite" data-slide-to="2"></li>
+		</ol>
+		<!--parte interna do carousel-->
+		<div class="carousel-inner">
+
+			<div class="carousel-item active">
+				<!--class="img-fluid d-block" - imagem responsiva 100% da tela-->
+				<img src="img/01.jpg" class="img-fluid d-block w-100">
+				<div class="carousel-caption d-none d-md-block text-dark">
+					<div class="pb-5">
+					<h1>Aprenda WEB Designer</h1>
+					<p class="lead">Seja um desenvolvedor web, aprenda técnicas com bootstrap, html, css e outras
+						linguagens</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<img src="img/02.jpg" class="img-fluid d-block w-100">
+				<!--d-none nao aparece o texto, acontece quando atingir o tamanho md-->
+				<div class="carousel-caption d-none d-md-block text-dark">
+					<div class="pb-5">
+					<h1>Desenvolvimento WEB</h1>
+					<!--class lead - o texto fica maior-->
+					<p class="lead">Seja um desenvolvedor web, aprenda técnicas com bootstrap, html, css e outras
+						linguagens</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<img src="img/03.jpg" class="img-fluid d-block w-100">
+				<div class="carousel-caption d-none d-md-block text-dark">
+					<div class="pb-5">
+					<h1>Programador WEB</h1>
+					<p class="lead">Seja um desenvolvedor web, aprenda técnicas com bootstrap, html, css e outras
+						linguagens</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!--botao de voltar - prev -->
+	<a class="carousel-control-prev" href="#carouselSite" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon"></span>
+		<!--opcional, somente para dispositivos de leitura-->
+		<span class="sr-only">Anterior</span>
+	</a>
+	<!--botao de avançar - next -->
+	<a class="carousel-control-next" href="#carouselSite" role="button" data-slide="next">
+		<span class="carousel-control-next-icon"></span>
+		<span class="sr-only">Próximo</span>
+	</a>
+
+	</div>
+
+	<!--BEM VINDOS-->
+	<!--container - 100% da tela-->
+	<div class="container">
+		<div class="row">
+			<!--col-12 é 100% da tela, col-6 é 50%-->
+			<!--my-5 é margem no eixo y de 5px-->
+			<div class="col-12 text-center my-5">
+				<!--diplay vai de 1 a 5, muda o tamanho-->
+				<h1 class="display-3">
+					<i class="fab fa-accusoft text-secondary"></i>
+					Bem Vindo!</h1>
+				<p>Seja bem vindo a nosso curso de web designer, você aprenderá diversas técnicas para desenvolver seus
+					sites!!</p>
+			</div>
+		</div>
+
+		<!--CARDS-->
+		<!--só centraliza quando estiver no tamanho small (sm)-->
+		<div class="row justify-content-sm-center">
+			<!--col-md-4 tamanho para tablets-->
+			<div class="col-sm-6 col-md-4 mb-5">
+				<div class="card">
+					<img class="card-img-top" src="img/01.jpg">
+					<div class="card-body">
+						<h4 class="card-title">Design Gráfico</h4>
+						<!--mb=margin botoon, text-muted = acizendatado-->
+						<h6 class="card-subtitle mb-2 text-muted">Aprenda já Design Gráfico</h6>
+						<p class="card-text">Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário
+						</p>
+						<!--para o modal funcionar : data-toggle="modal" data-target="#siteModal"-->
+						<a href="#" data-toggle="modal" data-target="#siteModal" class="card-link">Design Gráfico</a>
+						<a href="#" class="card-link">Saiba Mais</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-sm-6 col-md-4 mb-5">
+				<div class="card">
+					<img class="card-img-top" src="img/02.jpg">
+					<div class="card-body">
+						<h4 class="card-title">Programação WEB</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Aprenda já Programar Sites</h6>
+						<p class="card-text">Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário
+						</p>
+						<a href="#" class="card-link" data-toggle="modal" data-target="#prog">Programação WEB</a>
+						<a href="#" class="card-link">Saiba Mais</a>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="col-sm-6 col-md-4 mb-5">
+				<div class="card">
+					<img class="card-img-top" src="img/03.jpg">
+					<div class="card-body">
+						<h4 class="card-title">WEB Design</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Aprenda já Design Gráfico</h6>
+						<p class="card-text">Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário
+						</p>
+						<a href="#" class="card-link">WEB Design</a>
+						<a href="#" class="card-link">Saiba Mais</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--my-3 = margin-eixo-y (em cima e em baixo)-->
+		<!--ml-3 = margin-left-->
+		<!--mt-3 = margin-top-->
+		<div class="row">
+			<!--??-->
+			<div class="col-sm-6 col-md-4 mb-3">
+				<nav id="navbarVertical">
+					<!--flex column = ocupar todas colunas-->
+					<nav class="nav nav-pills flex-column">
+						<a class="nav-link" href="#item1">Curso de Web Design</a>
+						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3" href="#item1-1">Criando Templates</a>
+							<a class="nav-link ml-3" href="#item1-2">Criando Sites</a>
+						</nav>
+
+						<a class="nav-link my-2" href="#item2">Curso de Programador</a>
+
+						<a class="nav-link my-2" href="#item3">Curso de Design Gráfico</a>
+						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3" href="#item3-1">Criando Animações</a>
+							<a class="nav-link ml-3" href="#item3-2">Criando Projetos</a>
+						</nav>
+
+					</nav>
+				</nav>
+			</div>
+			<!--parte direita da rolagem, configura pelo css class= .scrollspy-->
+			<!--aumentando o col o texto fica mais esticado-->
+			<div class="col-md-8 col-sm-6 mb-2">
+				<!--data-spy="scroll" serve para rolagem de pagina-->
+				<div data-spy="scroll" data-target="#navbarVertical" data-offset="0" class="scrollspy">
+					<h4 id="item1">WEB Design </h4>
+					<p> Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem
+						sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos
+						e os embaralhou</p>
+
+					<h5 id="item1-1">Criação de Templates</h5>
+					<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma
+						página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem
+						uma distribuição normal de letras, ao contrário </p>
+
+					<h5 id="item1-2">Criação de Sites</h5>
+					<p>examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal
+						de letras, ao contrário </p>
+
+					<h4 id="item2">Curso de Programador </h4>
+					<p> Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem
+						sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos
+						e os embaralhou</p>
+
+
+
+					<h4 id="item3">WEB Design </h4>
+					<p> Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem
+						sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos
+						e os embaralhou</p>
+
+					<h5 id="item3-1">Criando Animações</h5>
+					<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma
+						página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem
+						uma distribuição normal de letras, ao contrário </p>
+
+					<h5 id="item3-2">Criando Projetos</h5>
+					<p>examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal
+						de letras, ao contrário </p>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!--JUMBOTRON APRENDA JÁ DESIGN WEB-->
+	<!--jumbotron-fluid = tudo q inserir vai estar dentro dessa area, 100% do site-->
+	<div class="jumbotron jumbotron-fluid mt-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h1 class="display-4">Aprenda já Design WEB</h1>
+					<p class="lead">É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto</p>
+					<hr>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<!--mb-5 pra distanciar o cadastre-se ja contate-nos nossos serviços-->
+					<ul class="nav nav-pills justify-content-center mb-5" id="pills-nav" role="tablist">
+						<li class="nav-item mr-3">
+							<a class="nav-link active" id="nav-01" href="#nav-item-01" data-toggle="pill">Cadastre-se
+								Já</a>
+						</li>
+						<li class="nav-item mr-3">
+							<a class="nav-link" id="nav-02" href="#nav-item-02" data-toggle="pill">Contate-nos</a>
+						</li>
+						<li class="nav-item mr-3">
+							<a class="nav-link" id="nav-03" href="#nav-item-03" data-toggle="pill">Nossos Serviços</a>
+						</li>
+					</ul>
+
+					<div class="tab-content" id="nav-pills-content">
+						<div class="tab-pane fade show active" id="nav-item-01" role="tabpanel">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="embed-responsive embed-responsive-16by9">
+										<iframe class="embed-responsive-item"
+											src="https://www.youtube.com/embed/QN10yF4TzwI"></iframe>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<h5>Seja um Desenvolvedor!</h5>
+									<hr>
+									<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto
+										legível de uma página quando estiver examinando sua diagramação.</p>
+
+									<p>legível de uma página quando estiver examinando sua diagramaçãoÉ um fato
+										conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de
+										uma página quando estiver examinando sua diagramação.</p>
+									<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto
+										legível de uma página quando estiver examinando sua diagramação.</p>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade show" id="nav-item-02" role="tabpanel">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="embed-responsive embed-responsive-16by9">
+										<iframe class="embed-responsive-item"
+											src="https://www.youtube.com/embed/jb23WQKMqPg"></iframe>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<h5>Seja um Web Designer!</h5>
+									<hr>
+									<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto
+										legível de uma página quando estiver examinando sua diagramação.</p>
+
+									<p>legível de uma página quando estiver examinando sua diagramaçãoÉ um fato
+										conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de
+										uma página quando estiver examinando sua diagramação.</p>
+									<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto
+										legível de uma página quando estiver examinando sua diagramação.</p>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade show" id="nav-item-03" role="tabpanel">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="embed-responsive embed-responsive-16by9">
+										<iframe class="embed-responsive-item"
+											src="https://www.youtube.com/embed/QN10yF4TzwI"></iframe>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<h5>Seja um Designer Gráfico!</h5>
+									<hr>
+									<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto
+										legível de uma página quando estiver examinando sua diagramação.</p>
+
+									<p>legível de uma página quando estiver examinando sua diagramaçãoÉ um fato
+										conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de
+										uma página quando estiver examinando sua diagramação.</p>
+									<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto
+										legível de uma página quando estiver examinando sua diagramação.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--FORMULARIO PARA CONTATO-->
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center my-5">
+				<h1 class="display-4"><i class="far fa-envelope mr-2"></i>Contate-Nos</h1>
+			</div>
+		</div>
+		<div class="row justify-content-center mb-5">
+			<div class="col-sm-12 col-md-10 col-lg-8">
+				<form>
+					<div class="form-row">
+						<div class="form-group col-sm-6">
+							<label for="nome">Nome</label>
+							<input type="text" class="form-control" id="nome" placeholder="Nome">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="sobrenome">Sobrenome</label>
+							<input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome">
+						</div>
+
+						<div class="form-group col-sm-12">
+							<label for="endereco">Endereço</label>
+							<input type="text" class="form-control" id="endereço" placeholder="Endereço">
+						</div>
+
+						<div class="form-group col-sm-6">
+							<label for="cidade">Cidade</label>
+							<input type="text" class="form-control" id="cidade" placeholder="Cidade">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="estado">Estado</label>
+							<input type="text" class="form-control" id="estado" placeholder="Estado">
+						</div>
+
+					</div>
+					<div class="form-row">
+						<div class="col-sm-12">
+							<button type="submit" class="btn btn-primary"><i
+									class="fas fa-envelope-open mr-2"></i>Enviar</button>
+							<!--POPOVER-->
+							<!--data-trigger="focus" - tipo de tela, se sair com o mouse some-->
+							<a class="btn btn-secondary ml-2" tabindex="0" role="button" data-toggle="popover"
+								data-placement="right" data-trigger="focus" title="Ajuda com o Formulário"
+								data-content="Preencha o formulário para receber em seu email..."><i
+									class="fas fa-info-circle mr-2"></i>Ajuda</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="row mt-5">
+			<div class="col-12">
+				<hr>
+			</div>
+			<div class="col-sm-4">
+				<h3 class="display-5 mb-3">Cursos de WEB</h3>
+				<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página
+					quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma
+					distribuição normal de letras.A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal
+					de letras.</p>
+			</div>
+			<div class="col-sm-6">
+				<h3 class="display-5 mb-3">Links</h3>
+				<div class="list-group">
+					<a href="#" class="list-group-item list-group-item-action">Sobre</a>
+					<a href="#" class="list-group-item list-group-item-action">Empresa</a>
+					<a href="#" class="list-group-item list-group-item-action">Depoimentos</a>
+					<a href="#" class="list-group-item list-group-item-action">Contatos</a>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<h3 class="display-5 mb-3">Social</h3>
+				<!--colocar os botoes em formato vertical-->
+				<div class="btn-group-vertical" role="group">
+					<a href="#" class="btn btn-light">
+						<h5 class="mb-2"><i class="fab fa-facebook mr-2"></i>Facebook &nbsp</h5>
+					</a>
+					<a href="#" class="btn btn-light">
+						<h5 class="mb-2"><i class="fab fa-twitter-square mr-2"></i></i>Twitter &nbsp &nbsp &nbsp</h5>
+					</a>
+					<a href="#" class="btn btn-light" alt="31 97527-5084" title="31 97527-5084">
+						<h5 class="mb-2"><i class="fab fa-whatsapp-square mr-2"></i></i>Whatsapp</h5>
+					</a>
+					<a href="#" class="btn btn-light">
+						<h5 class="mb-2"><i class="fab fa-instagram mr-2"></i></i>Instagram</h5>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-12 my-5">
+				<blockquote class="blockquote text-center">
+					<p class="mb-0">
+						se até a morte é um plágio, pra que levar tudo tão a sério?
+					</p>
+					<footer class="blockquote-footer">
+						tópaz
+
+						<cite title="Titulo">Desenvolvedor WEB</cite>
+					</footer>
+				</blockquote>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!--JANELAS MODAL -->
+	<!--tabindex sempre = -1 -->
+	<div class="modal fade" id="siteModal" tabindex="-1" role="dialog">
+		<!--modal-lg é o tamanho da janela do modal-->
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Design Gráfico</h5>
+					<button type="button" class="close" data-dismiss="modal">
+						<span>&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!--IMPORTANTE com container-fluid vai entender q tudo q inserir vai estar dentro dessa area -->
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-12">
+								<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto
+									legível de uma página quando estiver examinando sua diagramação. A vantagem de usar
+									Lorem Ipsum é que ele tem uma distribuição normal de letras</p>
+								<img src="img/01.jpg" width="100%">
+								<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto
+									legível de uma página quando estiver examinando sua diagramação. A vantagem de usar
+									Lorem Ipsum é que ele tem uma distribuição normal de letras</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<!--data-dismiss="modal" ja entende que é um botão para fechar a janela-->
+					<button type="button" class="btn btn-danger" data-dismiss="modal">
+						Fechar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="modal fade" id="prog" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Programação</h5>
+					<button type="button" class="close" data-dismiss="modal">
+						<span>&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!--IMPORTANTE com container-fluid vai entender q tudo q inserir vai estar dentro dessa area -->
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-6">
+								<h5>Programador WEB</h5>
+								<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto
+									legível de uma página quando estiver examinando sua diagramação. A vantagem de usar
+									Lorem Ipsum é que ele tem uma distribuição normal de letras</p>
+							</div>
+							<div class="col-6">
+								<h5>Programador Desktop</h5>
+								<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto
+									legível de uma página quando estiver examinando sua diagramação. A vantagem de usar
+									Lorem Ipsum é que ele tem uma distribuição normal de letras</p>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">
+						Fechar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
+
+
+
+<!--POPOVER linha 410-->
+<script type="text/javascript">
+	$(function () {
+		$('[data-toggle="popover"]').popover()
+	})
+</script>

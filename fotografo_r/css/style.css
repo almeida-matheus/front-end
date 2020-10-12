@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+/*corpo*/
+
+body {
+    font-family: Nunito, sans-serif;
+    color: #1c1c1c;
+}
+
+h1, h2, h3 {
+    font-family: Asap, sans-serif;
+    color: #000000;
+}
+
+.botao {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #191970;
+    font-size: .9em;
+    border-radius: 3px;
+}
+
+/*navegacao*/
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #191970;
+}
+
+/*logo do menu*/
+
+nav>a {
+    text-decoration: none;
+    /*sublinhado*/
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 25px;
+    font-family: Yellowtail, serif;
+}
+
+/*lista de texto presente no menu*/
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    /*RESPONSIVO - LARGURA*/
+}
+
+/*estilo dos itens do texto*/
+
+nav ul li {
+    text-align: center;
+    width: 100%;
+}
+
+/*ul - lista, li - itens*, a - links/
+/*estilo dos textos q estao dentro dos links*/
+
+nav ul li a {
+    display: inline-block;
+    /*transformar os links em bloco*/
+    padding: 10px 0;
+    /*tirar espaçamento entre a letra e o bloco*/
+    width: 100%;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*cabeçalho*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../img/camera.jpg");
+    background-size: cover;
+    /*cover - cobrir todo espaço*/
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #ffffff;
+}
+
+header p {
+    margin-bottom: 2.5em;
+    /*margem dinamica a partidar da posicao q iniciar na parte de baixo*/
+    max-width: 1000px;
+}
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px 20px 20px;
+    background-color: #191970;
+    color: #ffffff;
+}
+
+#sobre h2 {
+    color: #ffffff;
+}
+
+#sobre p {
+    margin-bottom: 2.5em;
+    /*margem dinamica para separar as seçoes*/
+    max-width: 1000px;
+    /*largura maxima, se tiver numa tela gigante, nao esticar tanto*/
+}
+
+#sobre .botao {
+    background-color: #f1f1f1;
+    color: #1c1c1c;
+}
+
+/*sessao do site (servicos)*/
+
+#servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+#servicos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/*sessao do site (fotos)*/
+
+#fotos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/*margem entre os textos e as fotos*/
+
+#fotos h2 {
+    margin-bottom: 20px;
+}
+
+#fotos img {
+    width: 100%;
+    /*largura*/
+}
+
+/*sessao do site (contato)*/
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#contato h2 {
+    color: black;
+}
+
+/*footer*/
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #191970;
+    color: #ffffff;
+}
+
+/*botao de voltar*/
+
+footer a {
+    text-decoration: none;
+    color: #00ffff;
+}
+
+/*quando o site carregar para uma tela maior q 768px(tablet)*/
+@media screen and (min-width: 768px) {
+    /*nav*/
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul{
+        flex-direction: row;
+        width: 70%;
+    }
+
+    /*topo do site*/
+    header {
+        height: 600px;
+        height: 60vh;
+        justify-content: center;
+    }
+    
+    /*sobre*/
+    #sobre {
+        height: 250px;
+        height: 30vh;
+        justify-content: center;
+        min-width: 250px;
+    }
+
+    /*serviços*/
+    #servicos {
+        flex-direction: row;
+        flex-wrap: wrap; /*quebra de linha*/
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: 0 auto;/*ajustar automaticamente a distancia dos lados*/
+    }
+
+    #servicos h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    #servicos div {
+        flex-grow: 1;
+        flex-basis: 150px; /*tamanho maximo para todas as flags*/
+        padding: 0 10px;
+    }
+
+    /*fotos*/
+    #fotos {
+        flex-direction: row;
+        flex-wrap: wrap; /*assim as fotos ficam lado a lado*/
+    }
+
+    #fotos h2{
+        width: 100%;
+        text-align: center;
+    }
+
+    #fotos img {
+        width: 33.3333333%;
+    }
+
+    /*contato*/
+
+    #contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+
+    #contato h2 {
+        width: 100%;
+    }
+
+    #contato p {
+        width: 100%;
+    }
+}

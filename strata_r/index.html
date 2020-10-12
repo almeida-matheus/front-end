@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Fundamentos</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+</head>
+<body id="topo">
+    <!--[NAVBAR] (navbar-toggler)-->
+    <!--fixed-top: navbar irá ficar fixa no topo (tem q dar um padding-top no body por causa disso-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
+      <a class="navbar-brand" href="#topo">
+          <!--se for maior que lg ele some-->
+          <span class="d-block d-lg-none">Daniel Tapias Morales</span>
+          <!--se for maior que lg ele aparece-->
+          <span class="d-none d-lg-block">
+              <img src="images/avatar.jpg" class="rounded-circle img-profile" alt="daniel">
+          </span>
+      </a>
+      <!--collapse informa ao javascript q é componente de fechar e abrir o menu-->
+      <!--data-target="#mainNav" = id (debaixo): qual elemento que deve abrir e fechar quando abrir o botao-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir ou fechar menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--data-target="#mainNav" = id (debaixo)-->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav">
+         <li class="nav-item">
+              <a class="nav-item nav-link active" href="#home">Início <span class="sr-only">(página atual)</span></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-item nav-link" href="#trabalhos-recentes">Trabalhos Recentes</a>
+         </li>
+         <li class="nav-item">
+             <a class="nav-item nav-link" href="#contato">Entre em Contato</a>
+         </li>
+        </ul>
+      </div>
+    </nav>
+    <!--**FINAL**[NAVBAR] (navbar-toggler)-->
+
+    <!--container-fluid (conteudo)-->
+    <div class="container-fluid">
+        <section class="section py-5" id="home">
+            <h2>Ipsum lorem dolor aliquam ante commodo<br>
+                 magna sed accumsan arcu neque.</h2>
+            <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p> 
+            <a href="#" class="btn btn-outline-dark btn-lg my-5" role="button">Saiba mais</a>
+        </section>
+        
+        <hr class="m-0">
+        <!--section trabalhos recentes-->
+        <section class="section" id="trabalhos-recentes">
+            <h2 class="my-5">Trabalhos Recentes</h2>
+            <!--[CARD] antes do grid deve iniciar com row-->
+            <div class="row">
+
+                <div class="col-12 col-sm-6">
+                    <div class="card">
+                        <a href="images/fulls/01.jpg">
+                            <img src="images/thumbs/01.jpg" alt="" class="card-img-top">
+                        </a>
+                        <p class="card-text">Magna sed consequat tempus</p>
+                        <p><small>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</small></p>   
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                    <div class="card">
+                        <a href="images/fulls/02.jpg">
+                            <img src="images/thumbs/02.jpg" alt="" class="card-img-top">
+                        </a>
+                        <p class="card-text">Magna sed consequat tempus</p>
+                        <p><small>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</small></p>          
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                    <div class="card">
+                        <a href="images/fulls/03.jpg">
+                            <img src="images/thumbs/03.jpg" alt="" class="card-img-top">
+                        </a>
+                        <p class="card-text">Tortor metus commodo</p>
+                        <p><small>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</small></p>                      
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                    <div class="card">
+                        <a href="images/fulls/04.jpg">
+                            <img src="images/thumbs/04.jpg" alt="" class="card-img-top">
+                        </a>
+                        <p class="card-text">Quam neque phasellus</p>
+                        <p><small>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</small></p>        
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                    <div class="card">
+                        <a href="images/fulls/04.jpg">
+                            <img src="images/thumbs/04.jpg" alt="" class="card-img-top">
+                        </a>
+                        <p class="card-text">Nunc enim commodo aliquet</p>
+                        <p><small>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</small></p>   
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                    <div class="card">
+                        <a href="images/fulls/04.jpg">
+                            <img src="images/thumbs/04.jpg" alt="" class="card-img-top">
+                        </a>
+                        <p class="card-text">Risus ornare lacinia</p>
+                        <p><small>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</small></p>   
+                    </div>
+                </div>
+
+            </div>
+            <!-- **FINAL** row [CARD]-->
+            <a href="#" class="btn btn-outline-dark btn-lg my-5" role="button">Full Portfolio</a>
+        </section>
+        <!--**FINAL** section trabalhos recentes-->
+
+        <hr class="m-0">
+        <!--section contato-->
+        <section class="section" id="contato">
+            <h2 class="my-5">Entre em contato</h2>
+            <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+            <!--[FORMS] form grid (form row)-->
+            <div class="row">
+                <div class="col-12 col-md-9">
+                    <form action="">
+                        <div class="form-row">
+
+                            <div class="col-12 col-sm-6 mt-3">
+                            <!--label é a etiqueta do input, deve ser = id do input-->
+                             <label for="nome">Nome</label>
+                              <input type="text" id="nome" class="form-control" placeholder="nome completo">
+                            </div>
+                            
+                           <div class="col-12 col-sm-6 mt-3">
+                             <label for="email">Email</label>
+                              <input type="email" id="email" class="form-control" placeholder="e-mail válido">
+                            </div>
+                            
+                            <div class="col-12 mt-3">
+                             <label for="msg">Mensagem</label>
+                             <textarea id="msg" class="form-control" rows="5"></textarea>
+                             <input type="submit" class="btn btn-lg btn-outline-secondary my-4" value="Enviar mensagem">
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <!--**FINAL** [FORMS] form grid (form row)-->
+                
+                <div class="col-12 col-md-3 pl-md-0 mt-3 mt-md-5">
+                    
+                    <address>                
+                      <p>
+                          <span>Endereço: </span>
+                          1234 Somewhere Rd. Nashville, TN 00000 United States
+                      </p>
+                      <p>
+                          <span>Telefone: </span>
+                          000-000-000
+                      </p>
+                      <p>
+                          <span>E-mail: </span>
+                          email@server.com
+                      </p>
+                    </address>
+		
+                </div>
+            </div>
+            <!-- row -->
+        </section>
+    </div>
+    <!--**FINAL** container-fluid (conteudo)-->
+    
+    <footer class="footer">
+        <!--para ir no final - direita-->
+        <ul class="nav justify-content-end d-flex">
+            <li class="nav-item"><a href="" class="nav-link icon-link">
+                <span class="sr-only">Twitter</span>
+                <i class="fab fa-twitter-square"></i>
+            </a></li>
+            <li class="nav-item"><a href="" class="nav-link icon-link">
+                <i class="fab fa-facebook-square"></i><span class="sr-only">Facebook</span>
+                
+            </a></li>
+        </ul>
+        
+        <ul class="justify-content-end d-flex">
+            <li class="mr-2"> &copy; Untitled</li>
+            <li>Design: <a href="http://html5up.net"> HTML5 UP</a></li>
+        </ul>
+    </footer>
+
+         
+
+      
+
+
+
+
+
+      
+
+      
+	
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>

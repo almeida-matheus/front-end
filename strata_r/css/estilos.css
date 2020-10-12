@@ -1,0 +1,137 @@
+body{
+    background-color: #fff;
+    padding-top: 3.75rem; /*menu esta fixado no topo, entao tem que dar um espaço pq tudo subiu*/
+    font-family: "Open Sans", Helvetica, sans-serif;
+    color: #787878;
+}
+
+#sideNav, .footer{
+    background-color: #3a3431;
+}
+#sideNav .nav-link{
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: white;
+}
+#sideNav .navbar-toggler:focus{
+    outline-color: #d48a6e; /*isso muda a cor da botao da sidebar quando esta ativo*/
+}
+/*sidenav funcionando para celular acima*/
+.card {
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.card a{
+    display: block; /*para ter acesso a td area da imagem la dentro*/
+    margin-bottom: 1rem;
+    position: relative; /*position relative pq vai ter um elemento dentro dele com position absolute*/
+}
+/*antes de passar o mouse na imagem*/
+.card a::before{
+    background-image: url(images/overlay.png);
+    border-radius: 0.35rem;
+    content:'';
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    opacity: 0; /*nao visivel no estado padrao*/
+    transition: opacity .2s linear;
+}
+/*antes de passar o mouse na imagem*/
+.card a::after{
+    border-radius: .35rem;
+    border: 3px solid rgba(255,255,255, .5);
+    color: white;
+    content: 'View';
+    display: inline-block;
+    font-size: .8rem;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    margin: -1.25em 0 0 -3em;
+    opacity: 0; /*nao visivel no estado padrao*/
+    padding: 0 1.5em;
+    text-align: center;
+    line-height: 2.25em; /*altura do botao*/
+    letter-spacing: 2px;
+}
+/*depois de passar o mouse na imagem*/
+.card a:hover::before, .card a:hover::after{
+    opacity: 1; /*1=default, quando passar o mouse via ver as modificacoes acima*/
+}
+
+.footer{
+    padding: .5rem 1rem;
+    font-size: .85rem;
+}
+.footer ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer a{
+    color: inherit; /*vai pegar a cor do lado, sem ser a formataçao de link*/
+}
+.footer .icon-link{
+    font-size: 1.5rem;
+}
+
+/*quando a tela ficar -lg pra cima a nav deve ficar no lado esquerdo*/
+@media screen and (min-width: 992px){
+    body{
+        padding-top: 0;
+        /*menu sidenav e footer ira ocupar 1/3 do total*/
+        padding-left: 35.33%; /*espaço de 1/3 na equerda (pq la q vai ficar o nav e footer*/
+    }
+    
+    #sideNav{
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        /*menu sidenav e footer ira ocupar 1/3 do total*/
+        width: 33.33%;
+        height: 100vh;
+        background-image: url(images/overlay.png), url(../images/bg.jpg);
+        background-attachment: scroll;
+        background-position: top left;
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
+        color: rgba(255,255,255,.5);
+        text-align: center;
+    }
+    
+    .img-profile{ /*pra nao esticar*/
+        max-height: auto;
+        margin: 2rem auto;
+    }
+    /*fazendo isso os links da nav ira ficar em baixo da foto*/
+    #sideNav .navbar-collapse{
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: auto;
+    }
+    /*links da nav ira ficar em formato de coluna*/
+    #sideNav .navbar-nav{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .footer{
+        position: fixed; /*ficar fixo e se movimentar pra qualquer lugar da pagina*/
+        bottom: 3rem;
+        left: 0; /*assim o footer ira colar na esquerda*/
+        width: 30%;
+        background-color: transparent;
+        z-index: 1031; /*ficar na frente do background*/
+    }
+}
+
+

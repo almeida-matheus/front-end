@@ -1,0 +1,28 @@
+body{
+    padding-top: 48px;
+}
+/*COLOCAR A NAVBAR EM BAIXO DO HEADER*/
+.sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 48px 0 0;
+    /*borda cobrindo a sidebar*/
+    box-shadow: inset -1px 0 0 rgba(0,0,0,.1);
+}
+/**/
+.sidebar-heading{
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.sidebar .nav-link{
+    font-weight: 500;
+    color: #333;
+}
+/*todo navlink que tiver o status ative ficara nesa cor*/
+.sidebar .nav-link.active{
+    color: #007bff;
+}
