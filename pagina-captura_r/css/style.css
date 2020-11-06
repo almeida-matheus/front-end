@@ -1,0 +1,15 @@
+.image {
+    background-image: url(../images/people.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.special-card {
+    background-color: rgba(255, 255, 255, 0.7);
+    /* opacity: 0.7; */
+}
+
+.text-shadow {
+    text-shadow: 2px 2px black;
+}

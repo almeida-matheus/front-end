@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <!-- reconhecer todos caracteres -->
+  <meta charset="utf-8">
+  <!--comando para funcionar responsividade no celular-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- CSS customizado-->
+  <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+  <!-- icones font awesome-->
+  <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
+  <!--COLOCAR O JAVASCRIPT NO FINAL DO BODY PARA NAO IMPEDIR Q O USUARIO POSSA VER A PAGINA-->
+  <!-- bootstrap javascript-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <!--logo-->
+  <link rel="icon" href="./images/ico.png">
+  <!--titulo-->
+  <title>pagina</title>
+
+</head>
+
+<body>
+  <div class="container shadow-lg p-0">
+    <div class="jumbotron-fluid bg-primary py-2">
+      <h1 class="h4 text-center text-white pb-0 mb-0 font-weight-bolder text-shadow">
+        PARTICIPE DO WORKSHOP QUE VAI MUDAR O SEU NEGÓCIO
+      </h1>
+    </div>
+    <div class="image">
+      <!-- <img class="img-fluid" src="./images/people.jpg" alt="people"> -->
+      <div class="row justify-content-center">
+        <div class="col-1 col-lg-7">
+
+        </div>
+        <div class="col-10 col-lg-5">
+          <!--d-block mx-auto: centralizar o card-->
+          <div class="card my-5 special-card d-block mx-auto" style="max-width: 24rem;">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bolder">
+                GARANTA O SEU LUGAR NO WORKSHOP DO MAIOR ESPECIALISTA EM MARKETING DA ATUALIDADE
+              </h5>
+              <p class="card-text">
+                Neste evento você vai aprender todos os segredos que vão te fazer ser um empreendedor de sucesso sem
+                precisar contar com a sorte.
+              </p>
+              <form>
+                <div class="row">
+
+                  <!--MAILCHIMP-->
+                  <!-- <form method="post"
+                    action="https://gmail.us17.list-manage.com/subscribe/post?u=957191939b0cda0d032548e7f&amp;id=5e98ae3ae2"
+                    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+                    novalidate> -->
+                    
+                  <form>
+                    <div class="form-group col-12">
+
+                      <!-- <label for="nameform">Nome</label> -->
+                      <input name="NAME" type="text" class="form-control mb-2" id="name" placeholder="nome">
+                    </div>
+                    <div class="form-group col-12">
+                      <!-- <label for="emailform">Email</label> -->
+                      <input name="EMAIL" type="text" class="form-control mb-2" id="email" placeholder="e-mail">
+                    </div>
+                    <div class="form-group col-lg-8">
+                      <input name="CITY" type="text" class="form-control mb-2" id="city" placeholder="cidade">
+                    </div>
+                    <div class="col-lg-4">
+                      <!-- <label for="inputEst">Estado</label> -->
+                      <select name="STATE" id="inputEst" class="form-control mb-2" placeholder="estado">
+                        <option value="AC">AC</option>
+                        <option value="AC">AL</option>
+                        <option value="AC">AM</option>
+                        <option value="AC">AP</option>
+                        <option value="AC">BA</option>
+                        <option value="AC">CE</option>
+                        <option value="AC">DF</option>
+                        <option value="AC">ES</option>
+                        <option value="AC">GO</option>
+                        <option value="AC">MA</option>
+                        <option value="AC" selected>MG</option>
+                        <option value="AC">MT</option>
+                        <option value="AC">MS</option>
+                        <option value="AC">PA</option>
+                        <option value="AC">PB</option>
+                        <option value="AC">PE</option>
+                        <option value="AC">PI</option>
+                        <option value="AC">PR</option>
+                        <option value="AC">RJ</option>
+                        <option value="AC">RO</option>
+                        <option value="AC">RN</option>
+                        <option value="AC">RS</option>
+                        <option value="AC">SC</option>
+                        <option value="AC">SE</option>
+                        <option value="AC">SP</option>
+                        <option value="AC">TO</option>
+                      </select>
+
+                      <!--MAILCHIMP real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                      <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_957191939b0cda0d032548e7f_5e98ae3ae2" tabindex="-1" value="" />
+                      </div> -->
+
+                    </div>
+                  </form>
+                  <div class="container">
+                    <button type="submit"
+                      class=" w-100 btn btn-md btn-primary mt-1 text-center active">INSCREVA-SE</button>
+                  <!-- <input type="submit" value="INSCREVA-SE" class=" w-100 btn btn-md btn-primary mt-1 text-center active"> -->
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-1 col-lg-0">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5 bg-dark">
+      <div class="row justify-content-md-center">
+        <div class="col-0 col-md-1 col-xl-2"></div>
+        <div class="col-12 col-md-3 col-xl-2 text-center p-0 m-0">
+          <img src="./images/face.jpg" class="img-fluid mr-md-3" alt="face" style="max-width: 120px;">
+        </div>
+        <div class="col-12 col-md-7 col-xl-6">
+          <div class="text-white">
+            <h4 class="mt-4 mt-md-0 font-weight-bolder text-center text-md-left">
+              O palestrante
+            </h4>
+            <p class="text-justify">
+              Carlos Fontana é conhecido por dar palestras que abalam a estrutura do marketing tradicional.
+              Prepare-se para sair do evento com uma nova visão do que é possível ser feito para o seu neogócio
+              decolar.
+            </p>
+            <p class="text-justify">
+              Formado em Marketing pela Universidade XYZ e fundador da MarkUp, a empresa vencedora dos últimos 5
+              Prêmios
+              MarketingBR.
+            </p>
+          </div>
+        </div>
+        <div class="col-0 col-md-1 col-xl-2"></div>
+      </div>
+
+      <!-- <div class="container py-4 bg-dark">
+      <div class="row justify-content-md-center">
+      <div class="col-12 col-xl-6 media">
+        <img src="./images/face.jpg" class="align-self-center mr-3" alt="face" style="max-width: 150px;">
+        <div class="media-body text-white">
+          <h5 class="mt-0 font-weight-bolder">O palestrante</h5>
+          <p>
+            Carlos Fontana é conhecido por dar palestras que abalam a estrutura do marketing tradicional.
+            Prepare-se para sair do evento com uma nova visão do que é possível ser feito para o seu neogócio decolar.
+          </p>
+          <p class="mb-0">
+            Formado em Marketing pela Universidade XYZ e fundador da MarkUp, a empresa vencedora dos últimos 5 Prêmios MarketingBR.
+          </p>
+        </div>
+      </div>
+      </div>
+    </div> -->
+
+    </div>
+
+</body>
+
+</html>
