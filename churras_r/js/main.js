@@ -10,13 +10,21 @@ const inputDuracao = document.getElementById("duracao");
 
 const resultado = document.getElementById("resultado");
 
+
+
 function calcular() {
+
+    const adultos = inputAdultos.value;
+    const criancas = inputCriancas.value;
+    const duracao = inputDuracao.value;
+
+    if (duracao === "") {
+        console.log("erro: duraçao = 0");
+        return false;
+        // break;
+    }
+
     console.log("Calculando...");
-
-    let adultos = inputAdultos.value;
-    let criancas = inputCriancas.value;
-    let duracao = inputDuracao.value;
-
 
     let qdtTotalCarne = carnePP(duracao) * adultos + (carnePP(duracao) / 2 * criancas);
     let qdtTotalCerveja = cervejaPP(duracao) * adultos;
@@ -28,7 +36,7 @@ function calcular() {
     resultado.innerHTML = `
     <div class="result-block">
         <img class="p-1" src="./assets/carne.svg" />
-        <p class="pt-3">${qdtTotalCarne/1000} kg de carne e linguiça</p>
+        <p class="pt-3">${qdtTotalCarne / 1000} kg de carne</p>
     </div>
 
     `
@@ -61,7 +69,7 @@ function calcular() {
 
 function carnePP(duracao) {
     if (duracao >= 6) {
-        return 650;
+        return 720;
     } else {
         return 400;
     }
@@ -69,14 +77,14 @@ function carnePP(duracao) {
 
 function cervejaPP(duracao) {
     if (duracao >= 6) {
-        return 2000;
+        return 2160;
     } else {
         return 1200;
     }
 }
 function refrigetantePP(duracao) {
     if (duracao >= 6) {
-        return 1500;
+        return 1800;
     } else {
         return 1000;
     }

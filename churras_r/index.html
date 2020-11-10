@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CSS customizado-->
-    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <!-- bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -27,13 +27,13 @@
     <link rel="icon" href="./assets/favicon.ico">
 </head>
 
-<body class="vh-100">
+<body class="vh-100 bg-black">
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
 
-                <div class="text-center mt-5">
+                <div class="text-center mt-5 ml-lg-5 pl-lg-5">
                     <h1 id="title">
                         CALCULE OS ALIMENTOS DO CHURRAS
                     </h1>
@@ -44,35 +44,38 @@
                 </div>
 
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
 
-                <div id="box-calculo" class="col-12 col-md-6 container shadow-lg my-5">
-                    <div class="justify-content-center">
+                <div id="box-calculo" class="col-12 col-lg-6 container shadow-lg my-5">
+                    <div class="justify-content-center text-center">
                         <img class="img-fluid" src="./assets/churraslogo.png">
 
                         <div class="form-group text-center mt-2">
                             <label for="adultos">Quantidade de adultos</label>
                             <input id="adultos" name="adultos" type="number"
-                                class="d-block mx-auto form-control mb-2 pr-lg-1 text-center w-50" placeholder="adultos">
+                                class="d-block mx-auto form-control mb-2 pr-lg-1 text-center w-50"
+                                placeholder="adultos">
                         </div>
 
                         <div class="form-group text-center mt-2">
                             <label for="criancas">Quantidade de crianças</label>
                             <input id="criancas" name="criancas" type="number"
-                                class="d-block mx-auto form-control mb-2 pr-lg-1 text-center w-50" placeholder="crianças">
+                                class="d-block mx-auto form-control mb-2 pr-lg-1 text-center w-50"
+                                placeholder="crianças">
                         </div>
 
                         <div class="form-group text-center mt-2">
                             <label for="duracao">Duração em horas</label>
                             <input id="duracao" name="duracao" type="number"
-                                class="d-block mx-auto form-control mb-2 pr-lg-1 text-center w-50" placeholder="duração">
+                                class="d-block mx-auto form-control mb-2 pr-lg-1 text-center w-50"
+                                placeholder="duração">
                         </div>
 
                         <div class="d-flex justify-content-center py-2">
                             <button onclick="calcular()" class="btn btn-md btn-primary mt-1 active">Calcular</button>
                         </div>
 
-                        <div >
+                        <div>
 
                             <div class="d-flex align-items-center justify-content-center mt-3">
                                 <div class="flex-column">
@@ -93,26 +96,59 @@
     </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Churrascômetro</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Carne e linguiça = 400gr por pessoa + de 6horas = 650gr<br>
-                Cerveja = 1200ml por pessoa + 6 horas = 2000ml<br>
-                Refrigerante = 1000ml por pessoa + 6 horas = 1500ml<br>
-                Crianças valem a metade (0,5)</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        <div class="modal-dialog modal-dialog-centered  modal-lg">
+            <div class="modal-content">
 
-    <script src="./scripts/script.js"></script>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Churrascômetro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- <p>Carne e linguiça = 400gr por pessoa + de 6horas = 650gr<br> 720
+                        Cerveja = 1200ml por pessoa + 6 horas = 2000ml<br> 2160
+                        Refrigerante = 1000ml por pessoa + 6 horas = 1500ml<br> 1800
+                        Crianças valem a metade (0,5)</p> -->
+
+                    <table class="table table-bordered text-center">
+                        <thead>
+                            <tr class="table-warning">
+                                <th>pessoa</th>
+                                <th>carne (kg)</th>
+                                <th>cerveja (L)</th>
+                                <th>refrigerante (L)</th>
+                                <th>duração +6hrs</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>adulto</td>
+                                <td>0.4</td>
+                                <td>1.2</td>
+                                <td>1</td>
+                                <td>x1.8</td>
+                            </tr>
+                            <tr>
+                                <td>criança</td>
+                                <td>0.2</td>
+                                <td>0</td>
+                                <td>0.5</td>
+                                <td>x1.8</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center justify">
+                    <p>uma lata de cerveja equivale a 355mL<br>
+                        uma garrafa de refrigerante equivale a 2L
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
