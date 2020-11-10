@@ -1,0 +1,113 @@
+/* .container{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 300px;
+    margin: auto;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+} */
+
+/*border-box: 100% vai ser contando td: borda, padding*/
+
+/* input{
+    width: 100%;
+    display: block;
+    padding: 5px;
+    box-sizing: border-box; 
+    margin-bottom: 10px;
+} */
+.body {
+    background-color: #D3D3D3;
+}
+
+#box-calculo {
+    background-color: #ffe162;
+    border-radius: 4rem 4rem 4rem 4rem;
+    height: 52rem;
+    font-family: Arial, Helvetica, sans-serif;
+    /* display: flex;
+    align-items: center;
+    flex-direction: column; */
+}
+
+/*INPUT*/
+
+#box-calculo input {
+    height: 2.8rem;
+    border: 0.15rem solid gray;
+    box-sizing: border-box;
+    border-radius: 0.8rem;
+    text-align: center;
+}
+
+#box-calculo input::placeholder {
+    color: #9c98a6;
+}
+
+/* #box-calculo input:hover {
+    border-width: 2px;
+    border: 0.15rem solid black;
+} */
+
+#box-calculo input:focus {
+    border-width: 2px;
+    border: 0.15rem solid #212121;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+/*BOTAO*/
+
+#box-calculo button {
+    width: 7rem;
+    height: 3rem;
+    background-color: #484848;
+    color: white;
+    border: none;
+    border-radius: 0.8rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#box-calculo button:hover {
+    background: #212121;
+    color: #ffe162;
+}
+
+/*RESULTADO CSS*/
+
+.result-info {
+    text-align: center;
+    /* width: 0 auto; */
+    margin-top: 1.5rem;
+}
+
+.result-block {
+    display: flex;
+    /*coloca a imagem e o texto na msm linha*/
+    align-items: center;
+    margin: 0.4rem;
+}
+
+.result-block img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.3rem;
+}
+
+.result-block p {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+#title {
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, .8);
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    #box-calculo {
+        height: 45rem;
+    }
+}
