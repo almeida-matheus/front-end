@@ -21,8 +21,8 @@
     background-color: #333 !important;
 }
 
-.bg-purple {
-    background-color: purple;
+.bg-yellow {
+    background-color: #ffe162 !important;
 }
 
 #box-calculo {
@@ -49,17 +49,17 @@
     color: #9c98a6;
 }
 
-/* #box-calculo input:hover {
-    border-width: 2px;
-    border: 0.15rem solid black;
-} */
-
 #box-calculo input:focus {
     border-width: 2px;
     border: 0.15rem solid #212121;
     box-shadow: 0 0 0 0;
     outline: 0;
 }
+
+/* #box-calculo input:hover {
+    border-width: 2px;
+    border: 0.15rem solid black;
+} */
 
 /*BOTAO*/
 

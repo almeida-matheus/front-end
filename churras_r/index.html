@@ -38,7 +38,7 @@
                         CALCULE OS ALIMENTOS DO CHURRAS
                     </h1>
                     <img class="img-fluid" src="./assets/barbecue-family.png" alt="">
-                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-warning bg-yellow " data-toggle="modal" data-target="#exampleModal">
                         Entenda o cálculo
                     </button>
                 </div>
@@ -74,18 +74,13 @@
                         <div class="d-flex justify-content-center py-2">
                             <button onclick="calcular()" class="btn btn-md btn-primary mt-1 active">Calcular</button>
                         </div>
-
-                        <div>
-
-                            <div class="d-flex align-items-center justify-content-center mt-3">
-                                <div class="flex-column">
-                                    <div id="resultado">
-
-                                    </div>
+                        <!--align-items-center: fica no meio vertical, justify-content-center: fica no meio horizontal-->
+                        <div class="d-flex align-items-center justify-content-center mt-3">
+                            <div class="flex-column">
+                                <div id="resultado">
 
                                 </div>
                             </div>
-
                         </div>
 
                     </div>
@@ -96,7 +91,7 @@
     </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered  modal-lg">
+        <div class="modal-dialog modal-dialog-centered  modal-md">
             <div class="modal-content">
 
                 <div class="modal-header">
@@ -106,12 +101,9 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <!-- <p>Carne e linguiça = 400gr por pessoa + de 6horas = 650gr<br> 720
-                        Cerveja = 1200ml por pessoa + 6 horas = 2000ml<br> 2160
-                        Refrigerante = 1000ml por pessoa + 6 horas = 1500ml<br> 1800
-                        Crianças valem a metade (0,5)</p> -->
-
-                    <table class="table table-bordered text-center">
+                    
+                    <!--d-none d-md-block: se passar do md ele aparece-->
+                    <table class="table table-bordered text-center d-none d-md-block">
                         <thead>
                             <tr class="table-warning">
                                 <th>pessoa</th>
@@ -138,9 +130,42 @@
                             </tr>
                         </tbody>
                     </table>
+                    <!--d-md-none: se passar do inicio do md ele some-->
+                    <table class="table table-bordered text-center d-md-none">
+                        <thead>
+                            <tr class="table-warning">
+                                <th>pessoa</th>
+                                <th>adulto </th>
+                                <th>criança </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>carne (kg)</td>
+                                <td>0.4</td>
+                                <td>0.2</td>
+                            </tr>
+                            <tr>
+                                <td>cerveja (L)</td>
+                                <td>1.2</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>refrigerante (L)</td>
+                                <td>1</td>
+                                <td>0.5</td>
+                            </tr>
+                            <tr>
+                                <td>duração +6hrs</td>
+                                <td>x1.8</td>
+                                <td>x1.8</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     <div class="text-center justify">
-                    <p>uma lata de cerveja equivale a 355mL<br>
-                        uma garrafa de refrigerante equivale a 2L
+                        <p>uma lata de cerveja equivale a 355mL<br>
+                            uma garrafa de refrigerante equivale a 2L
                         </p>
                     </div>
                 </div>
