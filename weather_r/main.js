@@ -14,6 +14,24 @@ const temp_span = document.querySelector('span');
 const weather_el = document.querySelector('.current .weather');
 const low_high = document.querySelector('.low-high');
 
+/*GEOLOCAZALICAO*/
+// window.addEventListener('load', () => {
+//   let long;
+//   let lat;
+//   if (navigator.geolocation){
+//     navigator.geolocation.getCurrentPosition(position => {
+//       console.log(position)
+//       long = position.coords.longitude;
+//       lat = position.coords.latitude;
+      
+//     })
+
+//   }
+//   else {
+//     alert('não foi possível utilizar o serviço de geolocalização')
+//   }
+// })
+
 /*se pressionar enter envia o valor do input para a funcao request*/
 searchbox.addEventListener('keypress', setQuery);
 function setQuery(event) {
@@ -75,8 +93,8 @@ function changeTemp() {
 }
 
 function dateBuilder (d) {
-  let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julio", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+  let days = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
 
   let day = days[d.getDay()]; //getDay: 0-6
   let date = d.getDate(); //getDate: day 1-30
