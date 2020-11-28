@@ -12,49 +12,61 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- icones font awesome-->
     <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
-    <!-- bootstrap javascript-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
     <!--titulo-->
     <title>sites</title>
     <style>
-        body{
+        body {
             background-color: white;
-            /* background-color: #212121; */
+        }
+
+        @media (min-width: 768px) {
+            .flex-column {
+                width: 50%;
+            }
         }
     </style>
 
 </head>
 
 <body>
-    <section class="vh-100">
-        <header class="container h-100"><!--tudo ficar centralizado-->
-            <div class="d-flex align-items-center justify-content-center h-100">
-                    <div class="flex-column w-50"> <!--w-50 ou <div class="col-6">-->
-                        <p class="text-center lead font-weight-bold">Sites front-end</p>
-                        <div class="list-group shadow-lg">
-                            <a href="https://almeida-matheus.github.io/" target="_blank" class="font-weight-bold text-center list-group-item list-group-item-action">Site 1 - Portfolio</a>
-                            <a href="./churras_r/index.html" target="_blank" class="font-weight-bold text-center list-group-item list-group-item-action list-group-item-secondary">Site 2 - Churrascômetro</a>
-                            <a href="./weather_r/index.html" target="_blank" class="font-weight-bold text-center list-group-item list-group-item-action">Site 3 - Clima</a>
-                            <a href="./infusion_r/index.html" target="_blank" class="font-weight-bold text-center list-group-item list-group-item-action list-group-item-secondary">Site 4 - Infusion</a>
-                            <a href="./curso-css_r/index.html" target="_blank" class="font-weight-bold text-center list-group-item list-group-item-action">Site 5 - Curso CSS</a>
-                            <a href="./strata_r/index.html" target="_blank" class="font-weight-bold text-center list-group-item list-group-item-action list-group-item-secondary">Site 6 - Strata</a>
-                            <a href="./dashboard/index.html" target="_blank" class="font-weight-bold text-center list-group-item list-group-item-action">Site 7 - Dashboard</a>
-                            <a href="./viagem_r/index.html" target="_blank" class="font-weight-bold text-center list-group-item list-group-item-action list-group-item-secondary">Site 8 - Viagem</a>
-                            <a href="./fotografo_r/index.html" target="_blank" class="font-weight-bold text-center list-group-item list-group-item-action">Site 9 - Fotógrafo</a>
-                            <a href="./pagina-captura_r/index.html" target="_blank" class="font-weight-bold text-center list-group-item list-group-item-action list-group-item-secondary">Site 10 - Captura</a>
-                        </div>
-                    </div>
+    <div class="container-sm d-sm-flex align-items-sm-center justify-content-sm-center vh-100">
+        <div class="flex-column">
+            <!--w-50 ou <div class="col-6">-->
+            <h3 class="text-center font-weight-bold pt-1">FRONT-END</h3>
+            <div class="list-group shadow-lg text-center lead font-weight-bold">
+                <a href="https://almeida-matheus.github.io/" target="_blank"
+                    class="list-group-item list-group-item-action">
+                    Portfolio</a>
+                <a href="./churras_r/index.html" target="_blank"
+                    class="list-group-item list-group-item-action list-group-item-secondary">
+                    Churrascômetro</a>
+                <a href="./weather_r/index.html" target="_blank" 
+                class="list-group-item list-group-item-action">
+                    Clima</a>
+                <a href="./infusion_r/index.html" target="_blank"
+                    class="list-group-item list-group-item-action list-group-item-secondary">
+                    Infusion</a>
+                <a href="./strata_r/index.html" target="_blank"
+                    class="list-group-item list-group-item-action">
+                    Strata</a>
+                <a href="./viagem_r/index.html" target="_blank"
+                    class="list-group-item list-group-item-action list-group-item-secondary">
+                    Viagem</a>
+                <a href="./curso-css_r/index.html" target="_blank" 
+                class="list-group-item list-group-item-action">
+                    Curso CSS</a>
+                <a href="./dashboard/index.html" target="_blank" 
+                class="list-group-item list-group-item-action list-group-item-secondary">
+                    Dashboard</a>
+                <a href="./fotografo_r/index.html" target="_blank" 
+                class="list-group-item list-group-item-action">
+                    Fotógrafo</a>
+                <a href="./pagina-captura_r/index.html" target="_blank"
+                    class="list-group-item list-group-item-action list-group-item-secondary">
+                    Captura</a>
             </div>
-        </header>
-    </section>
+        </div>
+    </div>
 </body>
 
 </html>
