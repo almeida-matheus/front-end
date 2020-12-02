@@ -1,129 +1,128 @@
 const api = {
-    key: "f4b1b1cb81a17f14da5076d4094545cd",
+    key: "64ed82577ced7f69cb1687f0ce536131",
     base: "https://api.openweathermap.org/data/2.5/",
     lang: "pt_br",
     units: "metric"
-  }
-  
-  
-  const city = document.querySelector('.container-location .city');
-  const date = document.querySelector('.container-location .date');
-  const container_icon = document.querySelector('.container-icon');
-  const degree_section = document.querySelector('.container-temp');
-  const temp = document.querySelector('.container-temp div');
-  const temp_span = document.querySelector('.container-temp span');
-  const weather_el = document.querySelector('.weather');
-  const low_high = document.querySelector('.low-high');
-  const searchbox = document.querySelector('.searchTerm');
-  const button = document.querySelector('.searchButton');
+}
 
-  /*GEOLOCAZALICAO*/
-  window.addEventListener('load', () => {
+const city = document.querySelector('.city')
+const date = document.querySelector('.date');
+const container_img = document.querySelector('.container-img');
+const container_temp = document.querySelector('.container-temp');
+const temp_number = document.querySelector('.container-temp div');
+const temp_unit = document.querySelector('.container-temp span');
+const weather_t = document.querySelector('.weather');
+const search_input = document.querySelector('.form-control');
+const search_button = document.querySelector('.btn');
+const low_high = document.querySelector('.low-high');
+
+window.addEventListener('load', () => {
+    //or if ("geolocation" in navigator)
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(setPosition, showError);
+        navigator.geolocation.getCurrentPosition(setPosition, showError);
     }
     else {
-      alert('navegador nao suporta geolozalicação');
+        alert('navegador não suporta geolozalicação');
     }
     function setPosition(position) {
-      console.log(position)
-      let lat = position.coords.latitude;
-      let long = position.coords.longitude;
-      getcoordResults(lat, long);
+        console.log(position)
+        let lat = position.coords.latitude;
+        let long = position.coords.longitude;
+        coordResults(lat, long);
     }
     function showError(error) {
-      alert(`erro: ${error.message}`);
+        alert(`erro: ${error.message}`);
     }
-  })
-  
-  // if (navigator.geolocation) {
-  //   navigator.geolocation.getCurrentPosition(position => {
-  //     console.log(position)
-  //   })
-  
-  
-  function getcoordResults(lat, long) {
+})
+
+function coordResults(lat, long) {
     fetch(`${api.base}weather?lat=${lat}&lon=${long}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
-      .then(response => {
-        return response.json();
-      }).then(displayResults);
-    //.catch(err => alert("cidade nao encontrada"))
-  }
-  /*//GEOLOCAZALICAO*/
-  
-  /*PESQUISA*/
-  /*enter no input*/
-  searchbox.addEventListener('keypress', setQuery);
-  function setQuery(event) {
-    let key = event.keyCode;
-    if (key == 13) {
-      getResults(searchbox.value);
-      console.log(searchbox.value);
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`http error: status ${response.status}`)
+            }
+            return response.json();
+        })
+        .catch(error => {
+            alert(error.message)
+        })
+        .then(response => {
+            displayResults(response)
+        });
+}
+
+search_button.addEventListener('click', function() {
+    searchResults(search_input.value)
+})
+
+search_input.addEventListener('keypress', enter)
+function enter(event) {
+    key = event.keyCode
+    if (key === 13) {
+        searchResults(search_input.value)
     }
-  }
-  /*button no input*/
-  button.addEventListener('click', function () {
-    getResults(searchbox.value);
-  })
-  
-  /*request na url | funcao weather retorna os valores em json*/
-  function getResults(query) {
-    fetch(`${api.base}weather?q=${query}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
-      .then(response => {
-        return response.json();
-      }).then(displayResults);
-    //.catch(err => alert("cidade nao encontrada"))
-  }
-  /*// PESQUISA*/
-  
-  function displayResults(weather) {
+}
+
+function searchResults(city) {
+    fetch(`${api.base}weather?q=${city}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`http error: status ${response.status}`)
+            }
+            return response.json();
+        })
+        .catch(error => {
+            alert(error.message)
+        })
+        .then(response => {
+            displayResults(response)
+        });
+}
+
+function displayResults(weather) {
     console.log(weather)
-  
+
     city.innerText = `${weather.name}, ${weather.sys.country}`;
-  
+
     let now = new Date();
     date.innerText = dateBuilder(now);
-  
+
     let iconName = weather.weather[0].icon;
-    container_icon.innerHTML = `<img src="./icons/${iconName}.png">`;
-  
+    container_img.innerHTML = `<img src="./icons/${iconName}.png">`;
+
     let temperature = `${Math.round(weather.main.temp)}`
-    temp.innerHTML = temperature;
-    temp_span.innerHTML = `°c`;
-    // changeTemp(temperature)
-  
-    weather_el.innerText = weather.weather[0].description;
-    // weather_el.innerText = weather.weather[0].main;
-  
+    temp_number.innerHTML = temperature;
+    temp_unit.innerHTML = `°c`;
+
+    weather_t.innerText = weather.weather[0].description;
+
     low_high.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
-  }
-  
-  
-  degree_section.addEventListener('click', changeTemp);
-  function changeTemp() {
-    // let celsius1 = parseInt(celsius)
-    tempNumber = temp.textContent
-  
-    if (temp_span.textContent === "°c") {
-      let fahrenheit = (9 * tempNumber + 160) / 5;
-      temp_span.textContent = "°f";
-      temp.innerHTML = `${Math.round(fahrenheit)}`;
-    }
-    else {
-      let celsius = (tempNumber - 32) / 1.8;
-      temp_span.textContent = "°c";
-      temp.innerHTML = `${Math.round(celsius)}`;
-    }
-  }
-  
-  function dateBuilder(d) {
-    let months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julio", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+}
+
+function dateBuilder(d) {
     let days = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
-  
+    let months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julio", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
     let day = days[d.getDay()]; //getDay: 0-6
-    let date = d.getDate(); //getDate: day 1-30
+    let date = d.getDate();
     let month = months[d.getMonth()];
     let year = d.getFullYear();
-  
-    return `${day} ${date} ${month} ${year}`;
-  }
+
+    return `${day}, ${date} ${month} ${year}`;
+}
+
+container_temp.addEventListener('click', changeTemp)
+function changeTemp() {
+    temp_number_now = temp_number.innerHTML
+
+    if (temp_unit.innerHTML === "°c") {
+        let f = (temp_number_now * 1.8) + 32
+        temp_unit.innerHTML = "°f"
+        temp_number.innerHTML = Math.round(f)
+    }
+    else {
+        let c = (temp_number_now - 32) / 1.8
+        temp_unit.innerHTML = "°c"
+        temp_number.innerHTML = Math.round(c)
+    }
+}
