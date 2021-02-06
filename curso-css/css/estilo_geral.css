@@ -127,7 +127,7 @@ section h2{
 
 .icon{
     font-size: 32px;
-    color: #ea8685;
+    color: #6ab04c;
     transition: .3s linear;
 }
 
@@ -148,7 +148,7 @@ section h2{
 .card-content h3{
     top: 20px;
     text-transform: uppercase;
-    color: #ea8685;
+    color: #6ab04c;
 }
 
 .card-content span{

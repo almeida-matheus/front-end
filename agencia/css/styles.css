@@ -20,7 +20,7 @@ p, li {
 /* Barra de navegação */
 
 header, .navbar {
-  background-color: #333;
+  background: linear-gradient(55deg, blue, green);
 }
 
 #nav-container {

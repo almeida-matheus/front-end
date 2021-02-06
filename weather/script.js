@@ -17,7 +17,7 @@ const search_button = document.querySelector('.btn');
 const low_high = document.querySelector('.low-high');
 
 window.addEventListener('load', () => {
-    //or if ("geolocation" in navigator)
+    //if ("geolocation" in navigator)
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(setPosition, showError);
     }
@@ -94,7 +94,8 @@ function displayResults(weather) {
     temp_number.innerHTML = temperature;
     temp_unit.innerHTML = `°c`;
 
-    weather_t.innerText = weather.weather[0].description;
+    weather_tempo = weather.weather[0].description;
+    weather_t.innerText = capitalizeFirstLetter(weather_tempo)
 
     low_high.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
 }
@@ -125,4 +126,8 @@ function changeTemp() {
         temp_unit.innerHTML = "°c"
         temp_number.innerHTML = Math.round(c)
     }
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }

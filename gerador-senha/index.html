@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <title>Gerador de senha</title>
+</head>
+
+<body class="vh-100">
+    <div class="container-fluid p-0 container-sm d-flex vh-100 justify-content-center align-items-sm-center">
+
+        <div class="card shadow-lg" style="width: 26rem;">
+
+            <div class="card-header mt-3">
+                <div class="pw">
+                    <span id="pw">$3nh4-f0r73!</span>
+                    <button id="copy">
+                        <i class="far fa-copy"></i>
+                        <!-- <i class="far fa-check-circle"></i> -->
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-body">
+
+                <div class="pw-body">
+                    <div class="form-control">
+                        <label for="len">Quantidade</label>
+                        <input id="len" value="20" type="number" min="1" maxlength="20" max="20" />
+                    </div>
+                    <div class="form-control">
+                        <label for="upper">Letras maiúsculas</label>
+                        <input id="upper" type="checkbox" class="toggle" />
+                        <label for="upper" class="label">
+                            <div class="ball"></div>
+                        </label>                    </div>
+                    <div class="form-control">
+                        <label for="lower">Letras minúsculas</label>
+                        <input id="lower" type="checkbox" class="toggle" />
+                        <label for="lower" class="label">
+                            <div class="ball"></div>
+                        </label>                    </div>
+                    <div class="form-control">
+                        <label for="number">Números</label>
+                        <input id="number" type="checkbox" class="toggle" />
+                        <label for="number" class="label">
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                    <!-- <div class="form-control">
+                        <label for="symbol">Símbolos</label>
+                        <input id="symbol" type="checkbox" />
+                    </div> -->
+
+                    <div class="form-control">
+                        <label for="symbol">Símbolos</label>
+                        <input id="symbol" type="checkbox" class="toggle" />
+                        <label for="symbol" class="label">
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-footer mb-3">
+
+                <button class="generate" id="generate">
+                    Gerar senha
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
