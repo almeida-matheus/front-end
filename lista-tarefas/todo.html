@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="todo.css" />
+    <title>To Do</title>
+</head>
+
+<body>
+    <div class="container-fluid p-0 container-sm d-flex justify-content-center vh-100 align-items-sm-center">
+
+        <div class="card shadow-lg" style="width: 26rem;">
+
+            <div class="card-header">
+                <i class="fas fa-th-list"></i>
+                <p>
+                    Lista de coisas para fazer</p>
+                <label for="switch">
+                    <input id="switch" type="checkbox">
+                    <i class="fas fa-adjust"></i>
+                </label>
+            </div>
+
+            <div class="card-body">
+                <form id="form">
+
+                    <div class="input-group my-3">
+                        <input type="text" id="input" class="form-control bg-light" placeholder="..." aria-label="lista"
+                            autocomplete="off" aria-describedby="btn-add">
+                        <div class="input-group-append">
+                            <button class="btn btn-success text-white" type="button" id="btn-add">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <ul class="list" id="list">
+                        
+                    </ul>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
