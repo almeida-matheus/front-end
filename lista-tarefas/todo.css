@@ -8,8 +8,18 @@
 
 body{
     font-family: 'Arvo', serif;
+    /* background-color: #555; */
 }
 
+@media screen and (min-width: 576px){
+    #container{
+        height: 100vh;
+        min-height: 100vh;
+
+        display: flex;
+        align-items: center;
+    }
+}
 /*HEADER*/
 .card-header {
     font-size: 22px;
@@ -17,6 +27,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.card-header button{
+    border: 0;
 }
 .card-header p{
     padding: 0;
@@ -34,12 +47,7 @@ body{
 /*// HEADER*/
 
 
-/*BUTTON*/
-/* .list button{ */
-    /* pointer-events: none; */
-    /* border: none;
-    background-color: transparent;
-} */
+/*BUTTON CLEAR*/
 .list i{
     border-radius: 50%;
     transition: all 0.15s ease;
@@ -51,9 +59,9 @@ body{
     color: red;
     background-color: #ccc;
 }
-/*// BUTTON*/
+/*// BUTTON CLEAR*/
 
-/*CLICK BUTTON*/
+/*CLICK BUTTON CLEAR*/
 .list i:active,
 .list i:focus{
     color: red;
@@ -62,12 +70,11 @@ body{
     box-shadow: none !important;
 }
 
-/*!= li.completed li .completed*/
-.list li.completed{
-    color: #b6b6b6;
-    text-decoration: line-through;
+.fall {
+    transform: translateX(-300rem);
+    opacity: 0;
 }
-/*// CLICK BUTTON*/
+/*// CLICK BUTTON CLEAR*/
 
 /*LIST*/
 .list {
@@ -85,5 +92,21 @@ body{
     /* display: flex;
     align-items: center; */
     /*d-flex flex-row*/
+    cursor: pointer;
+    transition: all 1s linear;
 }
 /*// LIST*/
+
+/*CLICK LIST*/
+/*!= li.completed li .completed*/
+/*left click*/
+.list li.completed{
+    color: #b6b6b6;
+    text-decoration: line-through;
+}
+/*right click*/
+.important{
+    font-weight: 700;
+}
+/*//CLICK LIST*/
+

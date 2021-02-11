@@ -37,66 +37,77 @@ generateEl.addEventListener("click", generatePassword);
 function generatePassword() {
     var len = lenEl.value;
 
-    if (len > 20) {
+    if (len > 20 || len < 1) {
         len = 20;
-    } else if (len < 1) {
-        len = 1;
     } else {
         len = lenEl.value;
     }
 
-    pwEl.innerText = "no way dude";
+    let password = "";
 
-    //se pelo menos 1 checkbox estiver marcada
-    if (upperEl.checked || lowerEl.checked || numberEl.checked || symbolEl.checked) {
-
-        let password = "";
-
-        //i = 0; i < tamanho valor digitado (8); i++
-        for (let i = 0; i < len; i++) {
-            const character = generateCharacter();
-            password += character;
-        }
-
-        pwEl.innerText = password;
-    }
-
-}
-
-function generateCharacter() {
-    const arrayCharacter = [];
-    //vai passar pelas 4 funcoes
     if (upperEl.checked) {
-        arrayCharacter.push(getUppercase());
+        password += getUppercase();
     }
 
     if (lowerEl.checked) {
-        arrayCharacter.push(getLowercase());
+        password += getLowercase();
     }
 
     if (numberEl.checked) {
-        arrayCharacter.push(getNumber());
+        password += getNumber();
     }
 
     if (symbolEl.checked) {
-        arrayCharacter.push(getSymbol());
+        password += getSymbol();
     }
 
-    // if (arrayCharacter.length === 0) {
-    //     printPassword()
-    //     return i = len;
-    // }
+    //irá acrescentar um valor no password a cada if
+    //se tiver os 4 checked = Aa1!
 
+    //i = 4; i < valor digitado (8); i++
+    for (let i = password.length; i < len; i++) {
+        const x = generateX();
+        password += x;
+    }
+    // console.log(password)
+
+    pwEl.innerText = password;
+}
+
+function generateX() {
+    const xs = [];
+    //vai passar pelas 4 funcoes
+    if (upperEl.checked) {
+        xs.push(getUppercase());
+        console.log(xs)
+    }
+
+    if (lowerEl.checked) {
+        xs.push(getLowercase());
+        console.log(xs)
+    }
+
+    if (numberEl.checked) {
+        xs.push(getNumber());
+        console.log(xs)
+    }
+
+    if (symbolEl.checked) {
+        xs.push(getSymbol());
+        console.log(xs)
+    }
+
+    if (xs.length === 0) return "";
     //(4) ["I", "p", "7", "*"]
 
     //RETORNA UM ELEMENTO DO ARRAY A PARTIR DA POSICAO ALEATORIA
     //Math.random(): numero aleatorio entre 0.1 e 0.99 [0, 1[
-    //arrayCharacter.lenght: quantidade de caracteres = 4
+    //xs.lenght: quantidade de caracteres = 4
     // na multiplicação irá retornar entre 1 e 4 (posição)
-    // arrayCharacter[3]
+    // xs[3]
     // 7
 
-    return arrayCharacter[Math.floor(Math.random() * arrayCharacter.length)];
+    return xs[Math.floor(Math.random() * xs.length)];
 }
 
 
