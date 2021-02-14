@@ -33,18 +33,22 @@ header, .navbar {
 }
 
 /*centralizar  quando o navbar-toggler no mobile*/
+
 .navbar-nav {
   text-align: center;
 }
+
 .nav-link {
   color: whitesmoke !important;
   padding: 25px;
 }
-.nav-link:hover{
+
+.nav-link:hover {
   color: #63c6ae !important;
 }
 
 /* CAROUSEL */
+
 html, body {
   height: 100%;
   margin: 0;
@@ -127,8 +131,8 @@ html, body {
   width: 40px !important;
   height: 40px !important;
 }
-/*// CAROUSEL */
 
+/*// CAROUSEL */
 
 /* Sobre a empresa */
 
@@ -210,6 +214,16 @@ html, body {
   font-size: 32px;
 }
 
+#data-area {
+  height: 420px;
+  background-image: url(../img/cidadeparallax.png);
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #data-area p {
   color: #FFF;
   text-align: center;
@@ -227,6 +241,12 @@ html, body {
 
 #apply-area {
   height: 500px;
+  background-image: url(../img/pattern.png);
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #apply-area .container-fluid, #apply-area .row {
@@ -240,6 +260,7 @@ html, body {
 
 #company-img {
   background-image: url('../img/empresa.jpg');
+  /*imagem cobre todo o container*/
   background-size: cover;
   height: 100%;
 }
@@ -258,20 +279,10 @@ html, body {
   margin-bottom: 20px;
 }
 
-#apply-btn {
-  display: block;
-  height: auto;
-  width: 180px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  background-color: transparent;
-  border-color: #FFF;
-}
-
-#apply-btn:hover {
+.btn-apply:hover {
   border-color: #65DAF9;
   background-color: #65DAF9;
+  color: #333;
 }
 
 /* Portfólio */
@@ -347,17 +358,19 @@ html, body {
 }
 
 /* Call To Action */
+
 .jumbotron {
   background-color: #65DAF9;
   color: black;
 }
-#call-area h4 {
+
+/* #call-area h4 {
   font-weight: 500;
   font-size: 20px;
   height: 60px;
   line-height: 60px;
   letter-spacing: 2px;
-}
+} */
 
 /* Footer */
 
@@ -400,31 +413,42 @@ html, body {
   border-radius: 0;
 }
 
-#contact-form .main-btn {
-  width: 120px;
-  height: 50px;
-}
+#contact-form .btn-primary:hover {
+  color: #333;
+  background-color: #3EC1D5;
 
-#contact-form .main-btn:hover {
-  color: #3EC1D5;
 }
 
 /* Copy */
+
+footer{
+  background-color: #F1F1F1;
+}
+
+footer a {
+  font-weight: bold;
+  color: #444;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: #3EC1D5;
+}
 
 #copy-area {
   background-color: #F1F1F1;
 }
 
-#copy-area .container {
+/* #copy-area .container {
   padding: 10px 0;
   text-align: center;
 }
 
 #copy-area .container p {
   margin-bottom: 0;
-}
+} */
 
-#copy-area .container a {
+/* #copy-area .container a {
   font-weight: bold;
   color: #444;
 }
@@ -432,7 +456,7 @@ html, body {
 #copy-area .container a:hover {
   text-decoration: none;
   color: #3EC1D5;
-}
+} */
 
 /* responsive */
 
@@ -461,7 +485,7 @@ html, body {
     margin-top: 100px;
   }
   /* data */
-  .circle-box div {
+  #data-area .circle-box div {
     padding: 0 10px;
   }
   #data-area p {

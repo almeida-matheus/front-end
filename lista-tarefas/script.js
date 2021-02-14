@@ -2,6 +2,8 @@ const form = document.getElementById("form");
 const input = document.getElementById("input");
 const ul = document.getElementById("list");
 const btnAdd = document.getElementById("btn-add");
+const textQnt = document.getElementById("qntLi");
+const btnDel = document.getElementById("btnDel");
 
 //click plus button
 btnAdd.addEventListener('click', function () {
@@ -24,6 +26,9 @@ if (objList) {
     //(2) [{…}, {…}]
         //0: {text: "test", completed: false}
         //1: {text: "eae", completed: true}
+
+    const qntLi = objList.length;
+    textQnt.innerText = qntLi;
 
     //pra cada objeto (0,1,2) executa addTodo passando obj de cada indice
     objList.forEach((obj) => {
@@ -93,6 +98,9 @@ function updateLS() {
     });
 
     localStorage.setItem("objList", JSON.stringify(objList));
+
+    const qntLi = objList.length;
+    textQnt.innerText = qntLi;
 }
 
 //LEFT CLICK INSIDE LIST (ul)
@@ -143,3 +151,11 @@ ul.addEventListener("contextmenu", (e) => {
         updateLS();
     }
 });
+
+//LEFT CLICK INSIDE TRASH
+btnDel.addEventListener("click", function(){
+    while(ul.firstChild){
+        ul.removeChild(ul.firstChild)
+    }
+    updateLS();
+}) 

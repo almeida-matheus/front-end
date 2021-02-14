@@ -3,6 +3,7 @@ $( document ).ready(function() {
   // Progress bar
   let containerA = document.getElementById("circleA");
 
+  //containerA: aonde o circulo vai ser construido
   let circleA = new ProgressBar.Circle(containerA, {
 
     color: '#65DAF9',
@@ -14,7 +15,8 @@ $( document ).ready(function() {
     step: function(state, circle) {
       circle.path.setAttribute('stroke', state.color);
 
-      var value = Math.round(circle.value() * 60);
+      //60: numero final
+      var value = Math.round(circle.value() * 22);
       circle.setText(value);
 
     }
@@ -34,7 +36,7 @@ $( document ).ready(function() {
     step: function(state, circle) {
       circle.path.setAttribute('stroke', state.color);
 
-      var value = Math.round(circle.value() * 254);
+      var value = Math.round(circle.value() * 12);
       circle.setText(value);
 
     }
@@ -54,7 +56,7 @@ $( document ).ready(function() {
     step: function(state, circle) {
       circle.path.setAttribute('stroke', state.color);
 
-      var value = Math.round(circle.value() * 32);
+      var value = Math.round(circle.value() * 6);
       circle.setText(value);
 
     }
@@ -74,7 +76,7 @@ $( document ).ready(function() {
     step: function(state, circle) {
       circle.path.setAttribute('stroke', state.color);
 
-      var value = Math.round(circle.value() * 5423);
+      var value = Math.round(circle.value() * 88);
       circle.setText(value);
 
     }
@@ -82,14 +84,17 @@ $( document ).ready(function() {
   });
 
   // iniciando loaders quando a usuário chegar no elemento
+  //pegar posicao da div
   let dataAreaOffset = $('#data-area').offset();
   // stop serve para a animação não carregar mais que uma vez
   let stop = 0;
 
   $(window).scroll(function (e) {
 
+    //posicao que o scroll do usuario está
     let scroll = $(window).scrollTop();
 
+    //se a posicao do usuario for maior da posicao da div (-500 pra nao ver zerada)
     if(scroll > (dataAreaOffset.top - 500) && stop == 0) {
       circleA.animate(1.0);
       circleB.animate(1.0);
@@ -100,14 +105,6 @@ $( document ).ready(function() {
     }
 
   });
-
-  // Parallax
-
-  // setTimeout serve para carregar primeiro as imagens
-  setTimeout(function() {
-    $('#data-area').parallax({imageSrc: 'img/cidadeparallax.png'});
-    $('#apply-area').parallax({imageSrc: 'img/pattern.png'});
-  }, 200);
 
   // Filtro portfólio
 
