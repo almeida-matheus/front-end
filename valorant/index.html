@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS customizado-->
+    <link href='css/style.css' rel='stylesheet' type='text/css' media='screen'>
+    <!-- bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--titulo-->
+    <title>Valorant</title>
+
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <div id="main-row" class="row m-0 p-0">
+            <div class="col-md-4 m-0 p-0">
+                <div class="login-container">
+                    <div class="container-logo">
+                        <img src="./assets/valorant-black.png" alt="valorant logo">
+                        <i class="fas fa-question-circle" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="You no longer need to select a region before signing in. When you sign in, the region associated with your account will be patched automatically."></i>
+                    </div>
+                    <p class="text-sign">Sign in</p>
+
+                    <div class="login-body">
+
+                        <form onkeyup="check()" id="login" autocomplete="off">
+
+                            <input type="text" name="login" placeholder="USERNAME">
+
+                            <input type="password" name="password" placeholder="PASSWORD">
+
+                            <div class="social-media">
+                                <i class="fab fa-facebook"></i>
+                                <!-- <i class="fab fa-facebook-f"></i> -->
+                                <i class="fab fa-google"></i>
+                                <i class="fab fa-apple"></i>
+                            </div>
+
+                            <label class="checkbox-container">
+                                <span class="text">Stay signed in</span>
+                                <input type="checkbox" >
+                                <!--checked="checked"-->
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <div class="button">
+                                <button type="submit" disabled>&#x279C;</button>
+                            </div>
+
+                        </form>
+
+                        <div class="login-footer">
+                            <a href="https://signup.br.leagueoflegends.com/pt/signup/index#/" target="_blank">
+                            CAN'T SIGN IN?
+                            </a>
+                            <a href="https://recovery.riotgames.com/pt-br/forgot-password?region=BR1" target="_blank">
+                                CREATE ACCOUNT?
+                            </a>
+                            <span class="version">V25.0.3</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-8 m-0 p-0">
+                <div class="img-config">
+                    <div class="window-tweaks">
+                        <i class="fas fa-window-minimize"></i>
+                        <i class="fas fa-question"></i>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <!-- <img src="https://wallpapercave.com/wp/wp6012286.jpg" class="img-fluid rounded" alt="valorant"> -->
+                    <a href=""><i class="fas fa-cog"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <!-- icones font awesome-->
+    <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
+    <!--javascript customizado-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

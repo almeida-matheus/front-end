@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arvo', serif;
+    /* background-color: #555; */
+}
+
+#main-row{
+    min-height: 100vh;
+}
+
+/*COL 1*/
+/*HEADER*/
+.login-container {
+    /* height: 490px; */
+    padding: 50px 60px;
+    background-color: #efefef;
+    height: 100%;
+}
+.container-logo{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.container-logo img{
+    width: 50px;
+    margin-top: 5px;
+}
+.container-logo .fa-question-circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    color: #999999;
+}
+.text-sign {
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin: 60px 0 15px 0;
+}
+/*// HEADER*/
+
+/*BODY*/
+.login-body form>input {
+    display: block;
+    width: 100%;
+    /* margin: 0 auto; */
+    margin-top: 20px;
+    padding: 18px;
+    outline: none;
+    border: 0;
+    font-weight: 600;
+    background: #dddddd;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: all 0.5s;
+}
+
+.login-body form>input:focus {
+    border: 2px solid #111111;
+    background: #efefef;
+}
+.login-body form>input::placeholder {
+   font-size: 12px;
+}
+
+/*SOCIAL MEDIA*/
+.login-body .social-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin: 40px 0 20px 0;
+}
+.login-body .social-media i{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    text-align: center;
+
+    padding: 10px;
+    background-color: #333;
+    width: 80px;
+    border-radius: 5px;
+
+    margin: 10px;
+
+    cursor: pointer;
+}
+.login-body .social-media i:hover{    
+    background-color: rgba(0, 0, 0, 0.7)
+}
+.login-body .social-media i.fa-apple{
+    font-size: 20px;
+    line-height: 16px;
+}
+/*// SOCIAL MEDIA*/
+
+/*CHECKBOX*/
+.checkbox-container {
+  /* display: block; */
+  position: relative;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-container span.text {
+    padding-left: 30px;
+
+    cursor: pointer;
+    font-size: 15px;
+    color: grey;
+}
+
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #dddddd;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #aaa;
+}
+
+/* When the checkbox is checked, add a red background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: red;
+}
+/*NAO FUNCIONA*/
+.checkbox-container input:checked + .checkbox-container span.text{
+    color: black !important;
+    font-weight: 500;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/*// CHECKBOX*/
+
+/*BUTTON SUBMIT*/
+.login-body form .button {
+    /* margin: 0 auto; */
+    margin-top: 80px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-body form .button button {
+    /* margin: 0 auto; */
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    background: #efefef;
+    border: 3px solid #dddddd;
+    color: #dddddd;
+    font-size: 26px;
+    border-radius: 20px;
+
+    outline: none;
+}
+
+.login-body form .button .btn-active {
+    background: #dc3939;
+    color: #efefef;
+    border-color: #dc3939;
+}
+
+.login-body form .button .btn-active:hover {
+    background: #c12f2f;
+    border-color: #c12f2f;
+}
+/*// BUTTON SUBMIT*/
+/*//BODY*/
+/*FOOTER*/
+.login-footer {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 11rem;
+}
+.login-footer a{
+    color: #888888;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 3px;
+}
+.login-footer a:hover{
+    color: #333;
+    text-decoration: none;
+}
+.login-footer span.version{
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+
+    color: #aaaaaa;
+    cursor: pointer;
+}
+.login-footer span.version:hover{
+    color: #333;
+}
+/*// FOOTER*/
+
+/*COL 2*/
+.img-config{
+    position: relative;
+
+    background: no-repeat url("../assets/valorant-wallpaper.jpg");
+    overflow: hidden;
+    background-size: cover;
+    background-position-x: 100%;
+
+    width: 100%;
+    height: 100%;
+}
+/*WINDOW TWEAKS*/
+.img-config .window-tweaks{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: row;
+}
+.img-config .window-tweaks i{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    
+    background-color: transparent;
+    padding: 15px;
+    /* margin: 10px; */
+
+    cursor: pointer;
+}
+.img-config .window-tweaks i:hover{    
+    background-color: rgba(255, 255, 255, 0.4)
+}
+.img-config .window-tweaks i.fa-times{
+    font-size: 20px;
+    line-height: 16px;
+}
+/*// WINDOW TWEAKS*/
+
+/*CONFIG BUTTON*/
+.img-config a {
+    text-decoration: none;
+    color: #fff;
+}
+.img-config .fa-cog {
+    position: absolute;
+    right: 45px;
+    bottom: 45px;
+
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+
+    /* box-shadow: 2px 3px 3px #000000; */
+    background-color: #777;
+    transition: all .3s;
+}
+.img-config .fa-cog:hover{
+    background-color: #444;
+    color: white;
+}
+/*// CONFIG BUTTON*/
+
+@media screen and (max-width: 720px) {
+    .login-footer {
+        margin-top: 30px !important;
+    }
+    .login-body form .button {
+        margin-top: 30px !important;
+    }
+    .login-footer span.version{
+        position: relative !important;
+        margin-top: 5px;
+    }
+}
