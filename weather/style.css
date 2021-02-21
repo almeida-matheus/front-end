@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
-
-body{
+body {
     font-family: 'Arvo', serif;
 }
 
-.city{
+.city {
     font-size: 32px;
 }
 
@@ -12,22 +11,27 @@ body{
     font-size: 16px;
 }
 
-.container-temp{
+.container-temp {
     display: flex;
     justify-content: center;
     background-color: rgba(244, 208, 63, 0.2);
     box-shadow: 5px 6px rgba(0, 0, 0, 0.6);
     cursor: pointer;
-
     font-size: 100px;
     font-weight: 900;
     text-shadow: 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.weather{
+.weather {
     font-size: 32px;
 }
 
 .low-high {
     font-size: 22px;
+}
+
+.form-control:focus {
+    border: #ddd 1px solid;
+    outline: 0 !important;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
 }
