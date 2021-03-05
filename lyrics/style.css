@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arvo', serif;
+    background-color: #1B2029;
+}
+
+.container-app {
+    /* height: 100%; */
+    width: 26rem;
+    padding: 20px 60px;
+    background-color: #1B2029;
+    height: 100%;
+}
+
+.container-app .title-app {
+    text-align: center;
+    color: #fff;
+}
+
+.container-app form .container-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.container-app form .container-input .form-group {
+    margin-top: 15px;
+
+}
+
+.container-app form .container-input input {
+    background-color: #161923;
+    color: white;
+}
+
+.container-app form button {
+    display: block;
+    margin: 30px auto;
+    transition: all .3s ease-in-out;
+
+    width: 90px;
+}
+
+.container-app form button {
+    display: block;
+    margin: 30px auto;
+    position: relative;
+    border: 1px solid transparent;
+    color: #000;
+    background-color: #eee;
+    transition: all .3s ease-in-out;
+}
+
+.container-app form button:hover {
+    border: 1px solid white;
+    color: #fff;
+    background-color: #1B2029;
+}
+
+.container-app form button::before, .container-app form button::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 60px;
+    bottom: 50%;
+    right: 100px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.container-app form button::after {
+    left: 100px;
+}
+
+.lyricSong {
+    /* width: 26rem; */
+    /* padding: 20px 60px; */
+    display: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: #161923;
+    /* height: 100%; */
+    overflow: auto;
+}
+
+.lyricSong #lyric {
+    padding: 10px;
+    color: white;
+}
+
+/*adjust for desktop screen*/
+
+@media screen and (min-width: 576px) {
+    /* #main-container {
+        height: 100vh;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    } */
+    .container-app {
+        width: 40rem;
+        height: auto !important;
+    }
+    .container-app form .container-input {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .container-app form .container-input input {
+        width: 15rem;
+    }
+    .container-app form button::before, .container-app form button::after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 190px;
+        bottom: 50%;
+        right: 100px;
+        background: rgba(255, 255, 255, 0.7);
+    }
+    .container-app form button::after {
+        left: 100px;
+    }
+}
