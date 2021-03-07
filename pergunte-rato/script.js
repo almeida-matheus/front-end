@@ -27,6 +27,7 @@ btnResult.addEventListener('click', function () {
     //clear text
     input1.value = "";
     input2.value = "";
+    input1.focus();
 })
 
 /*===== GENERATE RESULTS =====*/

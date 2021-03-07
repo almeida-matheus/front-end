@@ -118,6 +118,10 @@ body {
 .checkbox-container span.text {
     padding-left: 30px;
 
+    /*align center*/
+    position: relative;
+    bottom: 2px;
+
     cursor: pointer;
     font-size: 15px;
     color: grey;
@@ -154,7 +158,7 @@ body {
   background-color: red;
 }
 /*NAO FUNCIONA*/
-.checkbox-container input:checked + .checkbox-container span.text{
+.checkbox-container input:checked ~ .checkbox-container span.text{
     color: black !important;
     font-weight: 500;
 }
