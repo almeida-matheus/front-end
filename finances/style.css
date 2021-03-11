@@ -134,6 +134,13 @@ header {
     margin-bottom: 2rem;
 
     color: var(--dark-blue);
+
+    transition: all 1s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card:hover {
+    transform: scale(1.1);
 }
 
 .card h3 {
@@ -225,6 +232,9 @@ td.income {
 td.expense {
     color: #e92929;
 }
+table tbody td img {
+    cursor: pointer;
+}
 
 /* Modal ===================== */
 .modal-overlay {
@@ -250,6 +260,20 @@ td.expense {
 .modal-overlay.active {
     opacity: 1;
     visibility: visible;
+    /* animation: modal-up 1s; */
+}
+
+.modal-overlay.active  .modal{
+    animation: modal-up 1s;
+}
+
+@keyframes modal-up {
+    from {
+        transform: translateY(1000px);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .modal {
@@ -259,6 +283,7 @@ td.expense {
 
     position: relative;
     z-index: 1;
+
 }
 
 
@@ -324,3 +349,22 @@ footer {
         gap: 2rem;
     }
 }
+
+
+/* Responsive for mobile ===== */
+@media (max-width: 600px) {
+    .modal {
+        background: #F0F2f5;
+        /*tamanho do modal, aumenta conforme a tela*/
+        padding: 2.4rem;
+    
+        position: relative;
+        z-index: 1;
+    
+        /*mobile  margin untill border*/
+        /* max-width: 300px; */
+        width: 90%;
+    }
+}
+
+
