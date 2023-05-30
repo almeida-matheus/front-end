@@ -13,7 +13,7 @@ btnQuestion.addEventListener('click', function () {
     if (input1.value != "" && input2.value != "") {
         divQuestion.classList.toggle('show-result');
         divResult.classList.toggle('show-result');
-        img.setAttribute('src', "assets/shaman.png");
+        img.setAttribute('src', "./assets/image/shaman.png");
 
         generateResults();
     }
@@ -23,7 +23,7 @@ btnQuestion.addEventListener('click', function () {
 btnResult.addEventListener('click', function () {
     divQuestion.classList.toggle('show-result');
     divResult.classList.toggle('show-result');
-    img.setAttribute('src', "assets/mouse-reading.png");
+    img.setAttribute('src', "./assets/image/mouse-reading.png");
     //clear text
     input1.value = "";
     input2.value = "";
@@ -43,6 +43,12 @@ function generateResults() {
     //Math.random()*1 = 0.1 ate 0.9
     //Math.round = 0 > 0.5 >= 1
     randomResult = arrayText[Math.round(Math.random() * 1)];
+
+    profaneWords = ['cruzeiro','raposa','matheus','cdz'];
+    profaneWords.forEach(word => {
+        if (input1.value == word.toLowerCase() || input2.value == word.toLowerCase())
+            randomResult = word;
+    });
 
     showResults(randomResult, textInput1, textInput2)
 }

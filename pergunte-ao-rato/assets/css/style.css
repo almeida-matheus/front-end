@@ -37,7 +37,7 @@ body {
     width: 26rem;
     padding: 20px 60px;
 
-    background-color: rgba(244, 208, 63, 0.2);
+    background-color: rgba(244, 208, 63, 0.15);
 
     height: 100%;
 }
@@ -103,11 +103,12 @@ body {
 }
 
 .div-question button{
-    margin-top: 30px;
+    margin-top: 10rem;
     width: 100%;
 
     padding: 12px;
 
+    border-radius: 4px;
     background-color: #333;
     color: white;
 }
@@ -175,11 +176,12 @@ body {
 }
 
 .div-result button{
-    margin-top: 30px;
+    margin-top: 10rem;
     width: 100%;
 
     padding: 12px;
 
+    border-radius: 4px;
     background-color: #333;
     color: white;
 }
